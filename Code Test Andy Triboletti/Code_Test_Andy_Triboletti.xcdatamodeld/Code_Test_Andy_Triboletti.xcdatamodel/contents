@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Address" representedClassName="Address" syncable="YES" codeGenerationType="class">
+        <attribute name="myText" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="myContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="myAddress" inverseEntity="Contact" syncable="YES"/>
+    </entity>
+    <entity name="Contact" representedClassName="Contact" syncable="YES" codeGenerationType="class">
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="myAddress" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Address" inverseName="myContact" inverseEntity="Address" syncable="YES"/>
+        <relationship name="myEmail" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Email" inverseName="myContact" inverseEntity="Email" syncable="YES"/>
+        <relationship name="myPhone" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Phone" inverseName="myContact" inverseEntity="Phone" syncable="YES"/>
+    </entity>
+    <entity name="Email" representedClassName="Email" syncable="YES" codeGenerationType="class">
+        <attribute name="myText" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="myContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="myEmail" inverseEntity="Contact" syncable="YES"/>
+    </entity>
+    <entity name="Phone" representedClassName="Phone" syncable="YES" codeGenerationType="class">
+        <attribute name="myText" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="myContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="myPhone" inverseEntity="Contact" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Address" positionX="-621" positionY="9" width="128" height="73"/>
+        <element name="Contact" positionX="-344" positionY="-171" width="128" height="133"/>
+        <element name="Email" positionX="-162" positionY="60" width="128" height="73"/>
+        <element name="Phone" positionX="-63" positionY="-189" width="128" height="73"/>
+    </elements>
+</model>

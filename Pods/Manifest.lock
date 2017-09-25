@@ -1,0 +1,22 @@
+PODS:
+  - SwiftForms (1.7)
+
+DEPENDENCIES:
+  - SwiftForms (from `https://github.com/ortuman/SwiftForms.git`, branch `Swift4`)
+
+EXTERNAL SOURCES:
+  SwiftForms:
+    :branch: Swift4
+    :git: https://github.com/ortuman/SwiftForms.git
+
+CHECKOUT OPTIONS:
+  SwiftForms:
+    :commit: d01a3dd0d17435cc5bd23c4b8c78681401ccbd90
+    :git: https://github.com/ortuman/SwiftForms.git
+
+SPEC CHECKSUMS:
+  SwiftForms: 3f3dbaa79fe54eb1ccd0aca8d0cd1e38eb00537e
+
+PODFILE CHECKSUM: 6220bab0c403b92b65fe2687e2628958feaaaa1f
+
+COCOAPODS: 1.3.1
